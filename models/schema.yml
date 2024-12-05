@@ -24,7 +24,7 @@ models:
           - accepted_values:
               values:
                 ["Entire home/apt", "Private room", "Shared room", "Hotel room"]
-
+dim_listing_cleansed__minimum_nights
       - name: minimum_nights
         description: '{{ doc("dim_listing_cleansed__minimum_nights") }}'
         tests:
