@@ -2,9 +2,9 @@
 
 dbt expectations is an open source package for dbt based on Great Expectations, to enable testing in a data warehouse.
 
-Using the dbt expectations package allows data to be verified in terms of quality and accuracy at specific stages of the transformation process. It includes built in tests including not_null, unique etc. and custom tests written in sql which can extend test coverage (see // tests/no_nulls_in_dim_listings for example.)
+Using the dbt expectations package allows data to be verified in terms of quality and accuracy at specific stages of the transformation process. It includes built in tests including not_null, unique etc. and custom tests written in sql which can extend test coverage (see `/tests/no_nulls_in_dim_listings' for example.)
 
-When the package is imported etc. the tests are written in the schema.yml file. This is a breakdown of the examples in // models/schema.yml:
+When the package is imported etc. the tests are written in the schema.yml file. This is a breakdown of the examples in `/models/schema.yml`:
 
 **Basic Expectations:**
 
@@ -30,7 +30,7 @@ When the package is imported etc. the tests are written in the schema.yml file. 
 **To run the tests in the schema:**
 // dbt test
 To run a specific test:
-// dbt test --select model:dim_listings_cleansed
+`dbt test --select model:dim_listings_cleansed`
 
 To debug, the standard tool is dbt test --debug, but the advice on the bootcamp course is to run the failing test to find the sql which failed.
 
