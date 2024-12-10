@@ -6,21 +6,17 @@ Using the dbt expectations package allows data to be verified in terms of qualit
 
 When the package is imported etc. the tests are written in the schema.yml file. This is a breakdown of the examples in `/models/schema.yml`:
 
-**Basic Expectations:**
+**Built in dbt tests:**
 
 - not_null: Ensures that the column doesn't contain null values.
 - unique: Verifies that all values in the column are distinct.
 
-**Relationship Expectations:**
-
 - relationships: Checks if a foreign key relationship exists between two columns in different models.
-
-**Value-Based Expectations:**
 
 - accepted_values: Ensures that the column only contains specific values from a predefined list.
 - positive_value: Verifies that the column values are positive numbers.
 
-**Statistical Expectations:**
+**dbt-expectations Tests:**
 
 - dbt_expectations.expect_table_row_count_to_equal_other_table: Compares the row count of two tables.
 - dbt_expectations.expect_column_values_to_be_of_type: Checks the data type of a column.
